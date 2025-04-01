@@ -60,7 +60,7 @@ class Metadata extends Component
     /**
      * Extracts the metadata from an Asset.
      */
-    public function extract(Asset $asset, string $key = null, AssetMetadata $field = null): array|string
+    public function extract(Asset $asset, string $key, AssetMetadata $field): array|string
     {
         $fs = $asset->getVolume()->getFs();
         $deleteTempFile = false;

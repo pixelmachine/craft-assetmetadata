@@ -15,7 +15,7 @@ class ExifHelper
     /**
      * Converts an EXIF date/time string into a DateTime object.
      */
-    public static function convertExifDate(string $dateString, DateTimeZone $timezone = null): DateTime
+    public static function convertExifDate(string $dateString, DateTimeZone $timezone): DateTime
     {
         if (!preg_match('/(\d{4}:\d{2}:\d{2}) (\d{2}:\d{2}:\d{2})/', $dateString, $matches)) {
             throw new InvalidArgumentException('$dateString should be a valid EXIF date/time string.');
@@ -82,7 +82,7 @@ class ExifHelper
     /**
      * Formats a single GPS coordinate in sexagesimal format (ISO 6709).
      */
-    public static function formatGpsCoordinate(float $value, string $axis, string $format = null): string
+    public static function formatGpsCoordinate(float $value, string $axis, string $format): string
     {
         $map = [['S', 'N'], ['W', 'E']];
         $ref = $map[$axis === self::GPS_LAT ? 0 : 1][$value < 0 ? 0 : 1];
