@@ -1,7 +1,7 @@
 {
   "name": "carlcs/craft-assetmetadata",
   "description": "Asset Metadata plugin for Craft CMS",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "type": "craft-plugin",
   "keywords": [
     "asset",
@@ -24,8 +24,8 @@
     "docs": "https://github.com/carlcs/craft-deleteentryversions"
   },
   "require": {
-    "craftcms/cms": "^4.0.0-beta.1",
-    "james-heinrich/getid3": "^1.9.15"
+    "craftcms/cms": "^5.0.0",
+    "james-heinrich/getid3": "^1.9.23"
   },
   "autoload": {
     "psr-4": {
@@ -39,7 +39,8 @@
   "minimum-stability": "dev",
   "prefer-stable": true,
   "require-dev": {
-    "craftcms/phpstan": "dev-main"
+    "craftcms/phpstan": "dev-main",
+    "craftcms/rector": "dev-main"
   },
   "config": {
     "allow-plugins": {

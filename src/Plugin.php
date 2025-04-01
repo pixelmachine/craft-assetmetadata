@@ -84,7 +84,7 @@ class Plugin extends \craft\base\Plugin
             $event->tableAttributes = array_merge($event->tableAttributes, $this->_tableAttributes);
         });
 
-        Event::on(Asset::class, Element::EVENT_SET_TABLE_ATTRIBUTE_HTML, function(SetElementTableAttributeHtmlEvent $event){
+        Event::on(Asset::class, Element::EVENT_DEFINE_ATTRIBUTE_HTML, function(\craft\events\DefineAttributeHtmlEvent $event){
             if (isset($this->_tableAttributes[$event->attribute])) {
                 list(, $fieldHandle, $subfieldHandle) = explode(':', $event->attribute);
 
